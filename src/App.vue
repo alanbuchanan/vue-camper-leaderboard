@@ -56,11 +56,11 @@ export default {
   methods: {
     sortByRecent() {
       this.data = _.sortBy(this.data, 'recent').reverse()
-      store.state.sortingBy = 'recentDescending';
+      store.state.sortingBy = 'recentDescending'
     },
     sortByAllTime() {
       this.data = _.sortBy(this.data, 'alltime').reverse()
-      store.state.sortingBy = 'allTimeDescending';
+      store.state.sortingBy = 'allTimeDescending'
     },
     getActiveClass(string) {
       return {active: store.state.sortingBy.includes(string)}
