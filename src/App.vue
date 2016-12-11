@@ -1,16 +1,3 @@
-// I am importing `Vue` here and in `main.js`. Should the data be passed in from
-// `main.js` to avoid this?
-
-// The data renders as expected in any of the lifecycle methods `beforeCreate`,
-// `created`, `beforeMount` and `mounted`. Which one should it go inside?
-
-// Should `getActiveClass` go inside the `computed` object as per the docs page?
-
-// User Story: I can see a table of the Free Code Camp campers who've earned the most brownie points in the past 30 days.
-
-// User Story: I can see how many brownie points they've earned in the past 30 days, and how many they've earned total.
-
-// User Story: I can toggle between sorting the list by how many brownie points they've earned in the past 30 days and by how many brownie points they've earned total.
 <template>
   <div id="app">
     <button @click="sortByRecent">Sort by Recent Points</button>
