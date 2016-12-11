@@ -5,6 +5,12 @@
 // `created`, `beforeMount` and `mounted`. Which one should it go inside?
 
 // Should `getActiveClass` go inside the `computed` object as per the docs page?
+
+// User Story: I can see a table of the Free Code Camp campers who've earned the most brownie points in the past 30 days.
+
+// User Story: I can see how many brownie points they've earned in the past 30 days, and how many they've earned total.
+
+// User Story: I can toggle between sorting the list by how many brownie points they've earned in the past 30 days and by how many brownie points they've earned total.
 <template>
   <div id="app">
     <button @click="sortByRecent">Sort by Recent Points</button>
@@ -38,8 +44,7 @@ import _ from 'lodash'
 
 Vue.use(require('vue-resource'));
 
-const last30DaysEndpoint = 'https://fcctop100.herokuapp.com/api/fccusers/top/recent'
-const allTimeEndpoint = 'https://fcctop100.herokuapp.com/api/fccusers/top/alltime'
+const endpoint = 'https://fcctop100.herokuapp.com/api/fccusers/top/recent'
 
 const store = {
   state: {
@@ -55,7 +60,7 @@ export default {
     }
   },
   mounted() {
-    Vue.http.get(last30DaysEndpoint).then(response => {
+    Vue.http.get(endpoint).then(response => {
       this.data = response.body
     }, response => {
       console.warn('There was a data error:', response)
