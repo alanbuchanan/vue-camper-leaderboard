@@ -47,8 +47,6 @@ const store = {
   }
 }
 
-let myData = {}
-
 export default {
   data() {
     return {
